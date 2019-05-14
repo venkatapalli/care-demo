@@ -1,0 +1,40 @@
+<h3><span class="glyphicon glyphicon-user"></span>&nbsp;Customer Profile</h3><br>
+<div>
+
+        <table border='1' width='100%' style='border-collapse: collapse;'>
+          <tr>
+            <th></th>
+            <th>User Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Family Member</th>
+            <th>Partner Details</th>
+          </tr>
+          <tr *ngFor="let customer_detail of customer_details">
+            <td><a href="#"><span class="glyphicon glyphicon-user user"></span></a></td>
+            <td>{{ customer_detail.username }}</td>
+            <td>{{ customer_detail.address }}</td>
+            <td>{{ customer_detail.email }}</td>
+            <td>{{ customer_detail.f_member }}</td>
+            <td>{{ customer_detail.partner_details }}</td>
+            </tr>
+            </table></div>
+            <form #f = "ngForm">
+                    <label>Username</label>
+                    <input type="text" name="username" [(ngModel)] = "selectCustomer_details.username">
+                    <br>
+                   
+                    <label>Address</label>
+                    <input type="text" name="address" [(ngModel)] = "selectCustomer_details.address">
+                    <br>
+                    <label>Email</label>
+                    <input type="text" name="email" [(ngModel)] = "selectCustomer_details.email">
+                    <br>
+                    <label>Family Member</label>
+                    <input type="text" name="f_member" [(ngModel)] = "selectCustomer_details.f_member">
+                    <br>
+                    <label>Partner Details</label>
+                    <input type="text" name="partner_details" [(ngModel)] = "selectCustomer_details.partner_details">
+                    <br><br>
+                    <input type="button" class="submit btn btn-primary" (click)="createOrUpdateCustomer(f)" value="Add New Customer">
+                  </form>

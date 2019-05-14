@@ -1,0 +1,25 @@
+1.project creation - ng new pennacare
+note:
+------
+angular routing? y
+css :  scss
+*path>cd pennacare
+*node modules install - path>npm install
+----------------------------------------------------------------------------
+2.database:
+-----------------
+path>mkdir database
+path>npm install touch-cli -g  ---->file create through command prompt
+path>cd database
+path>touch database.php
+*DROP DATABASE IF EXISTS `pennacare`;
+*CREATE DATABASE IF NOT EXISTS `pennacare`;
+*use `pennacare`;
+*CREATE  TABLE  IF NOT EXISTS orders( order_id int(11) not null auto_increment, product_name varchar(50), order_total float,customer_id int(11) not null, primary key(order_id));
+*CREATE  TABLE  IF NOT EXISTS customers( id int not null auto_increment, username varchar(20),address varchar(100),email varchar(40),f_member varchar(20) ,partner_details varchar(250),`password` VARCHAR(255), primary key(id));
+----------------------------------------------------------------------------
+3.api service -  php -S 127.0.0.1:1111 -t ./database
+----------------------------------------------------------------------------
+4.component create - path>src-app : ng g component home
+----------------------------------------------------------------------------
+5.create service - project path>ng generate service

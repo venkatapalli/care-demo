@@ -1,0 +1,33 @@
+<h1>Register</h1>
+  <form name="registerform" method="post" action="" #f = "ngForm" >
+	<table border="0" width="500" align="center" class="demo-table">
+		<tr>
+			<td>User Name</td>
+			<td><input type="text" class="demoInputBox" name="username" [(ngModel)] = "selectCustomer.username"></td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><input type="text" class="demoInputBox" name="address" [(ngModel)] = "selectCustomer.address"></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><input type="text" class="demoInputBox" name="email" [(ngModel)] = "selectCustomer.email"></td>
+		</tr>
+		<tr>
+			<td>Family Member</td>
+			<td><input type="text" class="demoInputBox" name="f_member" [(ngModel)] = "selectCustomer.f_member"></td>
+		</tr>
+		<tr>
+			<td>Partner Details</td>
+			<td><input type="text" class="demoInputBox" name="partner_details" [(ngModel)] = "selectCustomer.partner_details"></td>
+		</tr>	
+		<tr>
+			<td>Password</td>
+			<td><input type="password" class="demoInputBox" name="password" [(ngModel)] = "selectCustomer.password"></td>
+		</tr>
+		<tr>
+			<td> <input type="button" (click)="createOrUpdateCustomer(f)" value="Create Customer"></td>
+		</tr>
+	</table>
+</form>
+ 
